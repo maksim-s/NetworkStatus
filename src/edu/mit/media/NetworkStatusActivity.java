@@ -40,14 +40,14 @@ public class NetworkStatusActivity extends Activity {
     }
     
     private void updateStatus(Intent intent) {
-    	String counter = intent.getStringExtra("counter");
-    	String wifiStatus = intent.getStringExtra("wifi");
+    	String counter      = intent.getStringExtra("counter");
+    	String wifiStatus   = intent.getStringExtra("wifi");
     	String mobileStatus = intent.getStringExtra("3G");
 
     	
     	TextView txtCounter = (TextView) findViewById(R.id.counter);
-    	TextView txtWifi = (TextView) findViewById(R.id.wifi_status);
-    	TextView txt3G = (TextView) findViewById(R.id.g_status);
+    	TextView txtWifi    = (TextView) findViewById(R.id.wifi_status);
+    	TextView txt3G      = (TextView) findViewById(R.id.g_status);
     	
     	txtCounter.setText(counter);
     	txtWifi.setText(wifiStatus);
