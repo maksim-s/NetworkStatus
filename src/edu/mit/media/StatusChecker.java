@@ -9,11 +9,11 @@ import android.os.Handler;
 import android.os.IBinder;
 
 public class StatusChecker extends Service {
-	public static final String BROADCAST_ACTION = "edu.mit.media.networkstatus";
-	private final Handler handler = new Handler();
+	public static final String  BROADCAST_ACTION = "edu.mit.media.networkstatus";
+	private       final Handler handler          = new Handler();
 	Intent intent;
-	int counter = 0;
-	String wifiStatus = "";
+	int    counter      = 0;
+	String wifiStatus   = "";
 	String mobileStatus = "";
 
 	@Override
@@ -43,8 +43,8 @@ public class StatusChecker extends Service {
 	
 	private void sendNetworkInfo() {
 		ConnectivityManager connection = (ConnectivityManager) this.getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo wifi = connection.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-		NetworkInfo mobile = connection.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
+		NetworkInfo         wifi       = connection.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+		NetworkInfo         mobile     = connection.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);
 		if (wifi.isAvailable()) {
 			wifiStatus = "Wifi Status: UP";
 		} else {
